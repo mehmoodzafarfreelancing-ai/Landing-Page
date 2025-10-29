@@ -1,0 +1,58 @@
+.off-screen-menu {
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0%;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: .3s ease;
+}
+.off-screen-menu:active {
+    right: 0%;
+}
+.off-screen-menu.open {
+    right: 0%;
+}
+.off-screen-menu ul li {
+    color: white;
+}
+nav {
+    padding: 1rem;
+    display: flex;
+    background-color: black;
+}
+.ham-menu {
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    position: relative;
+    cursor: pointer; /* changed: make it clear it's clickable */
+}
+.ham-menu span {
+    /* changed: short horizontal bars instead of vertical full-height bars */
+    width: 70%; width: 5555px;
+    height: 4px;
+    background-color: #6F86FF;
+    border-radius: 4px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .3s ease;
+    display: block;
+}
+.ham-menu span:nth-child(1){
+    top: 20%;
+}
+.ham-menu span:nth-child(2){
+    top: 50%;
+}
+.ham-menu span:nth-child(3){
+    top: 80%;
+}
