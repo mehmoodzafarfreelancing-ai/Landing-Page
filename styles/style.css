@@ -1,82 +1,30 @@
-.off-screen-menu {
-  background-color: black;
-  height: 100vh;
-  width: 100%;
-  max-width: 450px;
-  position: fixed;
-  top: 0%;
-  right: -450px;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+.navbar {
+  background-color: aqua;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  text-align: center;
-  font-size: 3rem;
-  transition: 0.3s ease;
-}
-/* Remove this rule as we're using .open class instead
-.off-screen-menu:active {
-    right: 0%;
-}
-*/
-.off-screen-menu.open {
-  right: 0%;
-}
-.off-screen-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.off-screen-menu ul li {
+  background-color: #333;
+  padding: 10px 20px;
   color: white;
-  margin: 20px 0;
-  cursor: pointer;
-  text-transform: capitalize;
+
 }
-.off-screen-menu ul li:hover {
-  color: #6f86ff;
-  transition: 0.3s ease;
+/* Logo */
+.logo {
+  font-size: 20px;
+  font-weight: bold;
 }
-nav {
-  padding: 1rem;
+/* Navigation libks */
+.nav-links {
+  list-style: none;
   display: flex;
-  background-color: black;
+  gap: 20px;
 }
-.ham-menu {
-  height: 50px;
-  width: 50px;
-  margin-left: auto;
-  position: relative;
-  cursor: pointer; /* changed: make it clear it's clickable */
-}
-.ham-menu span {
-  width: 70%;
-  height: 4px;
-  background-color: #6f86ff;
-  border-radius: 4px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: 0.3s ease;
-  display: block;
-}
-.ham-menu span:nth-child(1) {
-  top: 20%;
-}
-.ham-menu span:nth-child(2) {
-  top: 50%;
-}
-.ham-menu span:nth-child(3) {
-  top: 80%;
-}
-.ham-menu.active span:nth-child(1) {
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-.ham-menu.active span:nth-child(2) {
-  opacity: 0;
-}
-.ham-menu.active span:nth-child(3) {
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(-45deg);
+.nav-links li a {
+  text-decoration: none;
+  color: white;
 }
