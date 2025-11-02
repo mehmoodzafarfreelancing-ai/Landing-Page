@@ -1,23 +1,16 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  
 }
 .navbar {
-  background-color: aqua;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
+  /* background-color: #333; */
   padding: 10px 20px;
-  color: white;
-
 }
 /* Logo */
-.logo {
-  font-size: 20px;
-  font-weight: bold;
-}
+
 /* Navigation libks */
 .nav-links {
   list-style: none;
@@ -26,5 +19,39 @@ body {
 }
 .nav-links li a {
   text-decoration: none;
-  color: white;
+  color: black;
+}
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: black;
+  border-radius: 3px;
+  margin: 3px 0px;
+}
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    justify-content: center;
+    background: #333;
+    flex-direction: column;
+    width: 200px;
+    text-align: center;
+    padding: 20px;
+    gap: 10px;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .hamburger {
+    display: flex;
+  }
 }
