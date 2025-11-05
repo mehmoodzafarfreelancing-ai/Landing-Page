@@ -14,7 +14,7 @@ body {
 /* Navigation libks */
 .nav-links {
   list-style: none;
-  display: flex;
+  display: none;
   gap: 20px;
 }
 .nav-links li a {
@@ -22,6 +22,12 @@ body {
   color: black;
 }
 /* Hamburger Icon */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 12px;
+  }
 
 .hamburger span {
   height: 3px;
@@ -31,7 +37,8 @@ body {
   margin: 3px 0px;
 }
 .demo {
-  display: inline-block;
+  /* display: inline-block; */
+  display: none;
   /* background-color: white; */
   border: 1px solid #a6dc94;
   text-decoration: none;
@@ -42,8 +49,9 @@ body {
   transition: 0.3s ease;
 }
 .free-trial-btn {
-  display: inline-block;
 
+  display: none;
+  /* display: inline-block; */
   background-color: #3a7326;
   text-decoration: none;
   color: white;
@@ -53,34 +61,27 @@ body {
   transition: 0.3s ease;
 }
 .buttons-hamburger {
+  
+  /* display: none; */
   display: flex;
   align-items: center;
   gap: 12px;
 }
-@media (min-width: 768px) {
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    padding: 12px;
+
+@media (min-width: 768px) /* and (max-width: 1023px) */ {
+  
+  .demo {
+    display: inline-block;
   }
+  .free-trial-btn {
+    display: inline-block;
+  }
+}
+@media (min-width: 1024px) {
   .nav-links {
-    display: none;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    justify-content: center;
-    background: #333;
-    flex-direction: column;
-    width: 200px;
-    text-align: center;
-    padding: 20px;
-    gap: 10px;
-  }
-  .nav-links.active {
     display: flex;
   }
   .hamburger {
-    display: flex;
+    display: none;
   }
 }
